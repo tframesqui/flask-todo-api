@@ -1,5 +1,5 @@
 from flask import Blueprint
-from flask_restful import Resource, Api, url_for
+from flask_restful import Resource
 
 todo_bp = Blueprint('api', __name__)
 
