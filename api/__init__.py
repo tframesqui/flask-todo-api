@@ -1,9 +1,7 @@
 # Import flask and template operators
 from flask import Flask
 from flask_restful import Api
-
-# Import SQLAlchemy
-from flask.ext.sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine
 
 from api.modules.todo.resource import Todo, todo_bp
 
@@ -20,4 +18,4 @@ db = SQLAlchemy(app)
 
 app.register_blueprint(todo_bp)
 
-db.create_all()
+#db.create_all()
