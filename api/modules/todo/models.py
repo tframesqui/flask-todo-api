@@ -8,6 +8,9 @@ class Base(db.Model):
 
 class Item(Base):
     __tablename__ = 'Item'
-    
+
+    def __init__(self, name):
+        self.name = name
+
     name = db.Column(db.String(100), nullable=False)
     done = db.Column(db.Boolean, nullable=False)
